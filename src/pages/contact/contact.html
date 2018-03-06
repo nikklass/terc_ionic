@@ -1,0 +1,56 @@
+<ion-header>
+  
+  <ion-navbar>
+    
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Contact Us</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding  class="background">
+
+  <ion-card>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 offset-4>
+          <img src="assets/images/icon.png">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+    <ion-card-header>
+      Send us a message
+    </ion-card-header>
+
+    <ion-card-content>
+
+      <ion-list no-lines>
+
+        <ion-item>
+          <ion-label stacked>Subject</ion-label>
+          <ion-input type="text" name="subject" [(ngModel)]="messageData.subject" spellcheck="false" autocapitalize="off" required></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label stacked>Message</ion-label>
+          <ion-textarea name="message" [(ngModel)]="messageData.message" spellcheck="false" autocapitalize="off" required></ion-textarea>
+        </ion-item>
+        
+        <br>
+
+        <button ion-button block class="home-btn2 mb-20" (click)="onSendMessage()">
+          Send Message
+        </button>
+
+      </ion-list>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>

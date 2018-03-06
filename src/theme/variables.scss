@@ -1,0 +1,256 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+
+$colors: (
+  primary:    #11abef,
+  primarylight: #58c4f4,
+  primarylighter: #88d5f7,
+  primarydark: #0C9AEB,
+  primarydarker: #0A91E8,
+  secondary:  #FFC107,
+  secondarydark: #FFA000,
+  textlight: #666666,
+  textdark: #333333,
+  textdarker: #000000,
+  danger:     #f53d3d,
+  light:      #FFF,
+  dark:       #444,
+  favorite:   #69BB7B,
+  gray:       #f8f8f8,
+  bgColor:    #DDD,
+  facebook:   #3b5998,
+  google:     #d62d20,
+  success:    #69BB7B,
+  white:      #FFFFFF,
+  smalltext:    #666,
+  slide_one:     #11abef,
+  slide_three:     #66bb6a,
+  slide_two:     #1976d2
+);
+
+$toolbar-background: color($colors, primarydark);
+$tabs-background: color($colors, primary);
+$tabs-tab-color-active: color($colors, white);
+$tabs-tab-color-inactive: color($colors, primarydarker);
+
+//spinner
+$spinner-ios-ios-color: color($colors, primary);
+$spinner-ios-bubbles-color: color($colors, primary); 
+$spinner-ios-circles-color: color($colors, primarydark);
+$spinner-ios-crescent-color: color($colors, primarydark); 
+$spinner-ios-dots-color: color($colors, primary);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+$menu-ios-background: color($colors, primary);
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+$menu-md-background: color($colors, primary);
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+$menu-wp-background: color($colors, primary);
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+
+// Global Styles
+// --------------------------------------------------
+// Styles that apply to the entire app
+
+body, body:hover, body a, body button, body media-switch {
+  cursor: url('http://ionicframework.com/img/finger.png') 8 8, auto;
+}
+
+body ion-app {
+  overflow: visible;
+}
+
+ion-page {
+  display: flex;
+}
+
+ion-scroll {
+  width: 100%;
+  height: 100%;
+}
+
+body.has-scrollbar scroll-content {
+  margin-right: -15px;
+}
+
+body.has-scrollbar ion-menu scroll-content {
+  margin-right: 0;
+}
+
+scroll-content {
+  overflow-y: scroll;
+}
+
+.statusbar-img {
+  display: none;
+}
+
+.item-divider {
+    border-bottom: 1px solid #dedede !important;
+}
+
+
+
+// App iOS Styles
+// --------------------------------------------------
+// iOS only styles can go here
+
+.ios {
+
+  // iOS Status Bar
+  //---------------------------
+  .statusbar-img-ios {
+    display: block !important;
+    position: absolute;
+    background-color: transparent;
+    padding: 5px 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .tabs-icon-text tabbar {
+    .tab-button[aria-selected=true],
+    .tab-button:hover:not(.disable-hover) {
+      color: #7e60ff;
+    }
+  }
+
+}
+
+
+// App Material Design Styles
+// --------------------------------------------------
+// Material Design only styles can go here
+
+.md {
+
+  // Android Status Bar
+  //---------------------------
+  .statusbar-img-md {
+    display: block !important;
+    position: absolute;
+    background-color: transparent;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+  .tabs-icon-text ion-title div.toolbar-title {
+    color: #fff !important;
+  }
+
+  .tabs-icon-text tabbar {
+    background-color: #7e60ff;
+
+    a {
+      color: #fff !important;
+    }
+  }
+
+  .tabs-icon-text tab-highlight {
+    color: #fff;
+    background-color: #fff;
+  }
+
+}
+
+
+// App Windows Styles
+// --------------------------------------------------
+// Windows only styles can go here
+
+.wp {
+
+  // Windows Status Bar
+  //---------------------------
+  .statusbar-img-wp {
+    display: block !important;
+    position: absolute;
+    background-color: transparent;
+    padding: 5px 0;
+    top: 0px;
+    width: 100%;
+    height: auto;
+    z-index: 999;
+  }
+
+}
+

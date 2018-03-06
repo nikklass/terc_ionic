@@ -1,0 +1,64 @@
+page-contact {
+	
+	.background {
+		background-image: url('../assets/images/edit_lake.jpg');
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+	}
+	.content {
+		align-content: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		background-color: rgba(0,0,0,0);
+	}
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.7);
+		border-radius: 5px;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff !important;
+		text-align: center;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+	.item {
+		margin-bottom: 15px;
+		background: rgbs(255, 255, 255, 0.5);
+		border: medium none;
+
+		.text-input {
+			color: #666;
+		}
+
+		input::moz-placeholder {
+			color:#fff !important;
+		}
+
+		input:moz-placeholder {
+			color:#fff !important;
+		}
+
+		*:-moz-placeholder {
+			color:#fff !important;
+		}
+
+		*:-ms-input-placeholder {
+			color:#fff !important;
+		}
+
+		*:-webkit-input-placeholder  {
+			color:#fff !important; 
+		}
+
+	}
+
+
+}

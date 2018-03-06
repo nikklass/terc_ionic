@@ -1,0 +1,62 @@
+<ion-content padding id="page-primary">
+
+	<ion-grid>
+		<ion-row>
+			<ion-col col-4 offset-4>
+				<img src="assets/images/icon.png">
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+
+	<ion-card>
+
+		<ion-card-header>
+		  Confirm Account
+		</ion-card-header>
+
+		<ion-card-content>
+
+			<ion-list no-lines>
+
+				<ion-item>
+				    <ion-label>Country</ion-label>
+				    <ion-select [(ngModel)]="userData.phone_country" name="phone_country">
+				      <ion-option *ngFor="let country of countries" value="{{ country.country_code }}">
+				      	{{ country.name }}
+				      </ion-option>
+				    </ion-select>
+				</ion-item>
+
+				<ion-item>
+					<ion-input type="text" placeholder="Phone Number" name="phone" [(ngModel)]="userData.phone" spellcheck="false" autocapitalize="off" required></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-input type="text" placeholder="Confirmation Code" name="confirm_code" [(ngModel)]="userData.confirm_code" spellcheck="false" class="caps" required></ion-input>
+				</ion-item>
+
+				<br>
+
+				<button ion-button block outline class="home-btn2 mb-40" (click)="onAccountConfirm()">
+				  Confirm Account
+				</button>
+
+				<button ion-button block clear margin-top class="home-btn mb-20" (click)="onChangePhone()">
+				  Change Phone Number/ Email
+				</button>
+
+				<button ion-button block clear margin-top class="home-btn mb-20" (click)="onLogin()">
+				  Login
+				</button>
+
+			</ion-list>
+
+		</ion-card-content>
+
+	</ion-card>
+
+	<!-- <button ion-button full clear class="bottom mb-20" (click)="onSignup()">
+	  Don't have an account? Sign Up
+	</button> -->
+
+<ion-content>

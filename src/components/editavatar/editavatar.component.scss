@@ -1,0 +1,63 @@
+.editavatar-component {
+
+	.content.content {
+		background-color: rgba(0,0,0,0);
+	}
+
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.7);
+		border-radius: 5px;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff !important;
+		text-align: center;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+	.item {
+		margin-bottom: 15px;
+		background: rgbs(255, 255, 255, 0.5);
+		border: medium none;
+
+		.text-input {
+			color: #666;
+		}
+
+		input::moz-placeholder {
+			color:#fff !important;
+		}
+
+		input:moz-placeholder {
+			color:#fff !important;
+		}
+
+		*:-moz-placeholder {
+			color:#fff !important;
+		}
+
+		*:-ms-input-placeholder {
+			color:#fff !important;
+		}
+
+		*:-webkit-input-placeholder  {
+			color:#fff !important; 
+		}
+
+	}
+
+	.icon {
+		padding-right: 10px;
+	}
+
+	.bottom {
+		position: absolute;
+		bottom: 0;
+	}
+
+}

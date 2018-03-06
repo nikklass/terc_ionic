@@ -1,0 +1,35 @@
+<span class="editdob-component">
+
+	<ion-card>
+
+		<ion-card-content>
+
+			<ion-list no-lines> 
+
+				<ion-list-header class="bg-warning" color="white" clear>
+					** You can edit D.O.B. only once! **
+				</ion-list-header>
+
+				<ion-item>
+					<ion-label stacked>Date of Birth *</ion-label>
+					<ion-datetime displayFormat="DD/MM/YYYY" placeholder="Date of Birth" name="dob" 
+					[(ngModel)]="updateProfile.dob" required>
+						
+					</ion-datetime>
+				</ion-item>
+
+				<button ion-button block outline class="home-btn2 mb-30" (click)="onEditDob()">
+				  Save Date of Birth 
+				</button>
+
+				<button ion-button block clear margin-top class="home-btn mb-20" (click)="onProfile()">
+				  View Profile
+				</button>
+
+			</ion-list>
+
+		</ion-card-content>
+
+	</ion-card>
+
+</span>

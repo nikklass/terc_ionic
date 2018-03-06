@@ -1,0 +1,24 @@
+.profileview-component {
+
+	ion-icon {
+        font-size: 25px; 
+    }
+
+    ion-avatar img  {
+		width:100% !important;
+		height : 100% !important;
+		
+	}
+
+    .item-avatar  {     
+		width:100% !important;  
+		height : 100% !important;  
+	}
+
+	.item-divider{ min-height: 1px; }
+
+	.avatar-background{
+		background-color: color($colors, primarylight);
+	}
+	img.avatar{ border-radius: 100%; }
+}

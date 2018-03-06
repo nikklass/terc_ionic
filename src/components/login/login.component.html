@@ -1,0 +1,53 @@
+<span class="login-component">
+
+	<form #loginForm="ngForm" novalidate>
+
+		<ion-card>
+
+			<ion-card-header>
+			  Login Form
+			</ion-card-header>
+
+			<ion-card-content>
+
+				<ion-list no-lines>
+
+					<ion-item>
+						<ion-input type="text" placeholder="Email/Phone Number" name="username" 
+							[(ngModel)]="userData.username" spellcheck="false" autocapitalize="off" required #username="ngModel">
+								
+						</ion-input>
+					</ion-item>
+
+					<ion-item>
+						<ion-input type="password" placeholder="Password" name="password" 
+						[(ngModel)]="userData.password" required #password="ngModel"></ion-input>
+					</ion-item>
+					
+					<br>
+					<p>
+						<a (click)="forgotpassword()">Forgot Password</a>
+					</p>
+					<br>
+
+					<button ion-button block outline class="home-btn2 mb-40" (click)="login()">
+					  Login
+					</button>
+
+					<button ion-button block clear margin-top class="home-btn mb-20" (click)="onSignup()">
+					  Don't have an account? Sign Up
+					</button>
+
+					<button ion-button block clear margin-top class="home-btn mb-20" (click)="onConfirmAccount()">
+					  Confirm My Account
+					</button>
+
+				</ion-list>
+
+			</ion-card-content>
+
+		</ion-card>
+
+	</form>
+
+</span>

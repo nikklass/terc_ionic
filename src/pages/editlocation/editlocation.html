@@ -1,0 +1,18 @@
+<ion-header>
+
+  <ion-navbar>
+    
+    <button ion-button menuToggle>
+    <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Edit Location</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding class="image-background">
+
+	<app-editlocation (editlocationStatus)="editlocation($event)"></app-editlocation>
+
+<ion-content>

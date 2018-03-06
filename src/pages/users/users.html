@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+  	
+  	<button ion-button menuToggle>
+		<ion-icon name="menu"></ion-icon>
+  	</button>
+    <ion-title>Users</ion-title>
+    
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+	
+	<ion-list>
+		<ion-item *ngFor="let user of users" (click)="loadDetail(user.uuid)">
+			{{user.first_name}} {{user.last_name}} ({{user.gender.id}}) - 
+			{{user.country.data.name}}
+		</ion-item>
+	</ion-list>
+
+	<ion-infinite-scroll (ionInfinite)="loadMoreUsers($event)" distance="5%">
+	    <ion-infinite-scroll-content
+	      loadingSpinner="bubbles"
+	      loadingText="Loading more data...">
+	    </ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+
+</ion-content>

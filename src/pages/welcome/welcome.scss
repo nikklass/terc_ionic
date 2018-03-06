@@ -1,0 +1,16 @@
+page-welcome {
+	#welcome{
+		// background: rgba(color($colors, primary), 1); 
+		// .slide1{ background: rgba(color($colors, slide_one), 1); }
+		// .slide2{ background: rgba(color($colors, slide_two), 1); }
+		// .slide3{ background: rgba(color($colors, slide_three), 1); }		
+		.swiper-pagination-bullet-active{ background:white; }
+		button {
+			color: #fff;
+		}
+		.swiper-pagination{
+			bottom: 10% !important;
+		}
+	}
+
+}

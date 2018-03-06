@@ -1,0 +1,13 @@
+page-channelchat {
+
+	h3{
+		color: color($colors, primarydark);
+	}
+	h3.secondary{
+		color: color($colors, secondary);
+	}
+	.col{ padding: 0;  }
+
+	.date-display{ font-style: italic; font-size: 0.95rem; 
+		color: color($colors, textlight); }
+}

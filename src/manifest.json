@@ -1,0 +1,13 @@
+{
+  "name": "SNB",
+  "short_name": "SNB",
+  "start_url": "index.html",
+  "display": "standalone",
+  "icons": [{
+    "src": "assets/icon/favicon.png",
+    "sizes": "512x512",
+    "type": "image/png"
+  }],
+  "background_color": "#11abef",
+  "theme_color": "#11abef"
+}

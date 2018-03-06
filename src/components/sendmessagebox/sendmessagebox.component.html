@@ -1,0 +1,27 @@
+<span class="message-container">
+
+	<ion-grid class="message-form">
+		<ion-row>
+			
+			<ion-col col-9>
+			
+				<ion-textarea  [(ngModel)]="content" placeholder="Enter message..."
+				 (keyup.enter)="send()">
+					
+				</ion-textarea>
+
+			</ion-col>
+
+			<ion-col col-3>
+				
+				<button ion-button color="primarydarker" icon-start (click)="send()">
+					<ion-icon name="paper-plane"></ion-icon> 
+			      	Send
+			    </button>
+
+			</ion-col>
+
+		</ion-row>
+	</ion-grid>
+
+</span>

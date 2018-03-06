@@ -1,0 +1,154 @@
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+
+.image-background {
+    background-image: url('../assets/images/edit_lake.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+    .card-content {
+      padding: 16px !important;
+    }
+
+    .item {
+      margin-bottom: 16px; 
+      background: rgba(255, 255, 255, 0.9);
+      border: medium none;
+
+      .text-input {
+        color: #000;
+      }
+
+      input::moz-placeholder {
+        color:#fff !important;
+      }
+
+      input:moz-placeholder {
+        color:#fff !important;
+      }
+
+      *:-moz-placeholder {
+        color:#fff !important;
+      }
+
+      *:-ms-input-placeholder {
+        color:#fff !important;
+      }
+
+      *:-webkit-input-placeholder  {
+        color:#fff !important; 
+      }
+
+    }
+
+    .icon {
+      padding-right: 10px;
+    }
+
+}
+
+.display-text ion-input.disabled{ color: #000; }
+
+.logo{
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 100%;
+  }
+
+.content {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  /*background-color: rgba(0,0,0,0);*/
+}
+
+.item-divider .label { margin: 0; }
+
+ion-content .scroll-content, .scroll-content ion-content, ion-content .fixed-content {
+  background-color: rgba(0,0,0,0);
+}
+
+.card .list.no-padding .item, ion-content .list.no-padding .item { padding-right: 0; padding-left: 0; }
+
+.tabbar{ padding-bottom: 5px; }
+
+.activeHighlight {
+  background-color: map-get($colors, light);
+}
+
+.scroll-content {
+    overflow-y: auto !important;
+} 
+
+.mb-10{
+	margin-bottom: 10px;
+}
+.mb-20{
+	margin-bottom: 20px;
+}
+.mb-30{
+	margin-bottom: 30px;
+}
+.mb-40{
+	margin-bottom: 40px;
+}
+.mb-50{
+	margin-bottom: 50px;
+}
+
+#page-primary{
+    background: rgba(color($colors, primary), 1); 
+}
+#page-primary-light{
+    background: rgba(color($colors, primarylight), 1); 
+}
+
+#page-primary-lighter{
+    background: rgba(color($colors, primarylighter), 1); 
+}
+
+/*custom alert*/
+ion-alert {
+  text-align: center;
+  button{
+      color: blue;
+  }
+  &.alert-warning {
+    .alert-head {
+      background: map-get($colors, warning);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+  }
+  &.alert-danger {
+    .alert-head {
+      background: map-get($colors, danger);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+  }
+  &.alert-success {
+    .alert-head {
+      background: map-get($colors, success);
+      color: #fff;
+      margin-bottom: 10px;
+    }
+  }
+  /*end custom alert*/
+
+}

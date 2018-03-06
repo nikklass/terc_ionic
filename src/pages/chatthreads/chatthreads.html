@@ -1,0 +1,54 @@
+<ion-header>
+  
+  <ion-navbar>
+    
+    <button ion-button menuToggle>
+    	<ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>{{ channel?.name }}</ion-title> 
+
+    <!-- <ion-buttons end>
+	    <button ion-button icon-only (click)="showAddChatThread()">
+	    	<ion-icon name="add"></ion-icon>
+	    </button>
+    </ion-buttons> -->
+    
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content #content padding>
+
+	<ion-fab top right edge>
+	    
+	    <button ion-fab color="secondary">
+	    	<ion-icon name="arrow-dropleft" color="white"></ion-icon>
+	    </button>
+
+	    <ion-fab-list side="left">
+		    <button ion-fab (click)="refresh()"><ion-icon name="refresh"></ion-icon></button>
+		    <button ion-fab (click)="showAddChatThread()"><ion-icon name="add"></ion-icon></button>
+	    </ion-fab-list>
+
+	</ion-fab>
+	
+	<ion-list>
+
+		<ion-item text-wrap *ngFor="let chatthread of chatthreadList" 
+		(click)="selectChatThread(chatthread)">
+
+			{{ chatthread?.title }} 
+			<!-- {{ chatthread?.id }}  -->
+			<ion-badge item-end color="danger">{{ chatthread?.message_count }}</ion-badge>
+			
+		</ion-item>
+
+	</ion-list>
+
+	<ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())" *ngIf="currentpage < totalPage">
+	    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading ..."></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+
+</ion-content>

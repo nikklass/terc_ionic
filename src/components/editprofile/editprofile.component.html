@@ -1,0 +1,46 @@
+<span class="editprofile-component">
+
+	<ion-card>
+
+		<ion-card-content>
+
+			<ion-list no-lines> 
+
+				<ion-item>
+					<ion-label stacked>First Name *</ion-label>
+					<ion-input type="text" placeholder="First Name *" name="first_name" [(ngModel)]="updateProfile.first_name" required></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label stacked>Last Name *</ion-label>
+					<ion-input type="text" placeholder="Last Name *" name="last_name" [(ngModel)]="updateProfile.last_name" required></ion-input>
+				</ion-item>
+
+				<ion-item>
+				    <ion-label stacked>Gender *</ion-label>
+				    <ion-select [(ngModel)]="updateProfile.gender" name="gender">
+				      <ion-option value="m">Male</ion-option>
+				      <ion-option value="f">Female</ion-option>
+				    </ion-select>
+				</ion-item>
+
+				<ion-item>
+					<ion-label stacked>Preferred Monthly Contribution (Ksh)</ion-label>
+					<ion-input type="text" name="preferred_amount" [(ngModel)]="updateProfile.preferred_amount"></ion-input>
+				</ion-item>
+
+				<button ion-button block outline class="home-btn2 mb-30" (click)="onEditProfile()">
+				  Save Profile 
+				</button>
+
+				<button ion-button block clear margin-top class="home-btn mb-20" (click)="onProfile()">
+				  View Profile
+				</button>
+
+			</ion-list>
+
+		</ion-card-content>
+
+	</ion-card>
+
+</span>

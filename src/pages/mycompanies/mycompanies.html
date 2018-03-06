@@ -1,0 +1,55 @@
+<ion-header>
+  
+  <ion-navbar>
+    
+    <button ion-button menuToggle>
+    	<ion-icon name="menu"></ion-icon>
+    </button>
+
+    <ion-title>My Sacco Accounts</ion-title>
+
+    <ion-buttons end>
+	    <button ion-button icon-only (click)="showAddCompanyDialog()">
+	    	<ion-icon name="add"></ion-icon>
+	    </button>
+    </ion-buttons>
+    
+  </ion-navbar>
+
+</ion-header> 
+
+
+<ion-content #content padding>
+
+	<!-- <ion-fab bottom right edge color="secondary" (click)="refresh()">
+	    <button ion-fab><ion-icon name="refresh"></ion-icon></button>
+	</ion-fab> -->
+	
+	<!-- <ion-list>
+		
+		<ion-item text-wrap *ngFor="let company of companyList" (click)="selectCompany(company)">
+			
+			<ion-icon name="radio-button-off" item-start color="secondary"></ion-icon>
+			  {{ company?.name }}
+			<ion-badge item-end>{{ company?.box }}</ion-badge>
+
+		</ion-item>
+
+	</ion-list> -->
+
+	<ion-list>
+		<ion-item *ngFor="let company of companyList" (click)="showConfirmSwitch(company)">
+			<ion-thumbnail item-start>
+				<img src="{{ company?.main_image.thumb_img }}">
+			</ion-thumbnail>
+			<h2>{{ company?.name }}</h2>
+			<p>{{ company?.physical_address }}</p>
+			<button ion-button clear>Switch To Account</button>
+		</ion-item>
+	</ion-list>
+
+	<ion-infinite-scroll (ionInfinite)="$event.waitFor(doInfinite())" *ngIf="currentpage < totalPage">
+	    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="Loading ..."></ion-infinite-scroll-content>
+	</ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,96 @@
+<span class="profileview-component">
+
+	<ion-grid style="position: relative" class="avatar-background">
+
+	    <ion-row>
+	      <ion-col col-6 offset-3>
+	    	<ion-avatar>
+	    		<img src="assets/images/no_user.jpg" class="avatar" />
+	    	</ion-avatar>
+	      </ion-col>
+	    </ion-row>
+
+	</ion-grid>
+
+	<ion-grid>
+
+	  <div padding>
+
+		  <ion-row>
+		    <ion-col col-12>
+		    	<h3 text-center>{{ profile.first_name }} {{ profile.last_name }}</h3>
+		    </ion-col>
+		  </ion-row>
+
+		  <!-- <ion-row>
+		    <ion-col col-12>
+		    	<h5 text-center>{{ profile.phone }}</h5>
+		    </ion-col>
+		  </ion-row> -->
+ 
+		  <ion-row>
+		    <ion-col col-12>
+		    	<h6 text-center>
+		    		{{ profile.state }} 
+		    		<span *ngIf="profile.state">,</span> 
+		    		{{ profile.phone_country_name }}
+		    	</h6>
+		    </ion-col>
+		  </ion-row>
+
+		  <ion-item-divider ></ion-item-divider>
+
+	  </div>
+
+	  
+	  <ion-card>
+
+	    <ion-item>
+	      <ion-icon name='at' item-start color="secondary"></ion-icon>
+	      {{ profile.email }}
+	    </ion-item>
+
+	    <ion-item>
+	      <ion-icon name='body' item-start color="secondary"></ion-icon>
+	      {{ profile.gender_name }}
+	    </ion-item>
+
+	  </ion-card>
+
+
+	  <ion-card margin-top>
+
+	  		<ion-list inset class="display-text no-padding">
+
+			  <ion-item>
+			    <ion-col col-5 item-start><strong>Country</strong></ion-col>
+			    <ion-col col-7 item-start>{{ profile.phone_country_name }}</ion-col>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-col col-5 item-start><strong>State/ County</strong></ion-col>
+			    <ion-col col-7 item-start>{{ profile.state }}</ion-col>
+			  </ion-item>
+
+			  <ion-item *ngIf="profile.city">
+			    <ion-col col-5 item-start><strong>City</strong></ion-col>
+			    <ion-col col-7 item-start>{{ profile.city }}</ion-col>
+			  </ion-item>
+
+			  <ion-item *ngIf="profile.constituency">
+			    <ion-col col-5 item-start><strong>Constituency</strong></ion-col>
+			    <ion-col col-7 item-start>{{ profile.constituency }}</ion-col>
+			  </ion-item>
+
+			  <ion-item *ngIf="profile.ward">
+			    <ion-col col-5 item-start><strong>Ward</strong></ion-col>
+			    <ion-col col-7 item-start>{{ profile.ward }}</ion-col>
+			  </ion-item>
+
+			</ion-list>
+
+	  </ion-card>
+	  
+	</ion-grid>
+
+</span>

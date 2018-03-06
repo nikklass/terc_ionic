@@ -1,0 +1,72 @@
+page-accountconfirm {
+	
+	ion-card .caps{
+		text-transform: uppercase;
+	}
+	.logo{
+		margin-left: auto;
+		margin-right: auto;
+		border-radius: 100%;
+	}
+
+	.content.content-md {
+		background-color: rgba(0,0,0,0);
+	}
+
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.5);
+		border-radius: 5px;
+	}
+
+	a, p,
+	ion-card-header.card-header {
+		color: #fff !important;
+		text-align: center;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+	.item {
+		margin-bottom: 15px;
+		background: rgba(255, 255, 255, 1);
+		border: medium none;
+
+		.text-input {
+			color: #666;
+		}
+
+		input::moz-placeholder {
+			color:#fff !important;
+		}
+
+		input:moz-placeholder {
+			color:#fff !important;
+		}
+
+		*:-moz-placeholder {
+			color:#fff !important;
+		}
+
+		*:-ms-input-placeholder {
+			color:#fff !important;
+		}
+
+		*:-webkit-input-placeholder  {
+			color:#fff !important; 
+		}
+
+	}
+
+	.icon {
+		padding-right: 10px;
+	}
+
+	.bottom {
+		position: absolute;
+		bottom: 0;
+	}
+
+}

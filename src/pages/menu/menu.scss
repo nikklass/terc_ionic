@@ -1,0 +1,16 @@
+page-menu {
+	
+	#menu{
+		.header { background-color: rgba(color($colors, primarydarker), 1); }
+		.content, .fixed-content, .scroll-content, .list, .list .item { background-color: rgba(color($colors, primary), 1); }
+		.item-divider{ background-color: rgba(color($colors, primary), 1);  }
+		h2{color: rgba(color($colors, white), 1);}
+	}
+	
+	$toolbar-background: rgba(color($colors, primary), 1); 
+	$toolbar-border-color: rgba(color($colors, primary), 1); 
+	$toolbar-text-color: rgba(color($colors, white), 1); 
+	$toolbar-active-color: rgba(color($colors, secondary), 1); 
+	$toolbar-inactive-color: rgba(color($colors, white), 1); 
+
+}

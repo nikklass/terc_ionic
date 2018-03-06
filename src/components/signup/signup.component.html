@@ -1,0 +1,72 @@
+<span class="signup-component">
+
+	<ion-card>
+
+		<ion-card-header>
+		  Signup Form
+		</ion-card-header>
+
+		<ion-card-content>
+
+			<ion-list no-lines>
+
+				<ion-item>
+					<ion-label stacked>First Name *</ion-label>
+					<ion-input type="text" name="first_name" [(ngModel)]="userData.first_name" required>
+
+					</ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label stacked>Last Name *</ion-label>
+					<ion-input type="text" name="last_name" [(ngModel)]="userData.last_name" required>
+					</ion-input>
+				</ion-item>
+
+				<hr>
+
+				<ion-item>
+					<ion-label stacked>Email *</ion-label>
+					<ion-input type="email" name="email" [(ngModel)]="userData.email" required></ion-input>
+				</ion-item>
+
+				<ion-item>
+				    <ion-label stacked>Country *</ion-label>
+				    <ion-select [(ngModel)]="userData.phone_country" name="phone_country"
+				    	 required>
+				      <ion-option *ngFor="let country of countries" value="{{ country.country_code }}">
+				      	{{ country.name }}
+				      </ion-option>
+				    </ion-select>
+				</ion-item>
+
+				<ion-item>
+				    <ion-label stacked>Mobile Number *</ion-label>
+				    <ion-input type="text" name="phone" [(ngModel)]="userData.phone" required></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label stacked>Password *</ion-label>
+					<ion-input type="password" name="password" [(ngModel)]="userData.password"  required></ion-input>
+				</ion-item>
+
+				<ion-item>
+					<ion-label stacked>Password Confirmation *</ion-label>
+					<ion-input type="password" name="password_confirmation" [(ngModel)]="userData.password_confirmation"  required></ion-input>
+				</ion-item>
+
+				<button ion-button block outline class="home-btn2 mb-30" (click)="signup()">
+				  Sign Up
+				</button>
+
+				<button ion-button block clear margin-top class="home-btn mb-20" (click)="onLogin()">
+				  Already have an account? Login
+				</button>
+
+			</ion-list>
+
+		</ion-card-content>
+
+	</ion-card>
+
+</span>

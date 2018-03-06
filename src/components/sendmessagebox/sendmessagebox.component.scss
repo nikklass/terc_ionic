@@ -1,0 +1,34 @@
+.message-container{
+	display: flex; padding: 6px;
+}
+
+.message-form {
+	flex:1;
+	color: color($colors, textdark);
+}
+
+.message-form textarea {
+	border-color: #FFFFFF; 
+	background-color: color($colors, primarylight);
+	margin: 0.4rem 0.2rem; padding: 1rem; min-height: 4rem;
+}
+
+input::moz-placeholder {
+	color: color($colors, textdark);
+}
+
+input:moz-placeholder {
+	color: color($colors, textdark);
+}
+
+*:-moz-placeholder {
+	color: color($colors, textdark);
+}
+
+*:-ms-input-placeholder {
+	color: color($colors, textdark);
+}
+
+*:-webkit-input-placeholder  {
+	color: color($colors, textdark);
+}

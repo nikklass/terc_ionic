@@ -1,0 +1,16 @@
+<span class="profile-component">
+
+	<ion-searchbar [(ngModel)]="query" (ionChange)="searchUser(query)">
+	
+	</ion-searchbar>
+
+	<ion-list *ngIf="profileList?.length > 0">
+		<ion-item *ngFor="let profile of profileList" (click)="selectProfile(profile)">
+	      <ion-thumbnail item-start>
+	        <img src="assets/images/no_user.jpg">
+	      </ion-thumbnail>
+	      <h2>{{ profile.first_name }} {{ profile.last_name }}</h2>
+	    </ion-item>
+	</ion-list>
+
+</span>

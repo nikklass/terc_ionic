@@ -1,7 +1,7 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget android-packageName="ke.co.heavybit.snb" android-versionCode="2" id="ke.co.heavybit.snb" ios-CFBundleVersion="1" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>SNB</name>
-    <description>Savings and Investments</description>
+<widget android-packageName="ke.co.heavybit.terc" android-versionCode="1" id="ke.co.heavybit.terc" ios-CFBundleVersion="1" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>TERC</name>
+    <description>Raising Foundations for Future Generations</description>
     <author email="nikk_lass@yahoo.com" href="http://showbiz.co.ke">Nikk Kute</author>
     <content src="index.html" />
     <access origin="*" />

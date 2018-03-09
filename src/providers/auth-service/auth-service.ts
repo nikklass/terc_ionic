@@ -10,7 +10,7 @@ import { MyUserData } from '../my-user-data/my-user-data';
 import { AuthToken } from '../../models/authToken/authToken.interface';
 
 //let mainUrl = "http://127.0.0.1:8000/";
-let mainUrl = "http://41.215.126.10/snb/";
+let mainUrl = "http://41.215.126.10/terc/";
 let apiUrl = mainUrl + "api/"; 
 
 @Injectable()

@@ -37,7 +37,8 @@ export class MyApp {
         this.rootPage = 'MenuPage';
         //this.rootPage = 'MycompaniesPage';
       } else {
-        this.rootPage = 'WelcomePage';
+        //this.rootPage = 'WelcomePage';
+        this.rootPage = 'LoginPage';
       }
 
     });

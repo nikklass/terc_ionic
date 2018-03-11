@@ -72,7 +72,7 @@ export class SignupComponent implements  OnInit, OnDestroy {
 	        || this.userData.password_confirmation === '') {
 	        let alert = this.alertCtrl.create({
 	          cssClass:'alert-danger',
-	          title:'Signup Error',
+	          title:'Registration Error',
 	          subTitle:'All fields marked * are required',
 	          buttons:['OK']
 	        });
@@ -82,7 +82,7 @@ export class SignupComponent implements  OnInit, OnDestroy {
 
 	      //insert new record
 	      this.loadersignup = this.loadingCtrl.create({
-	        content: "Signing up..."
+	        content: "Creating account..."
 	      });
 	      this.loadersignup.present();
 

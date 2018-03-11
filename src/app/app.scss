@@ -13,9 +13,9 @@
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
 
-
+.grey-background {background-color: #f6f6f6 !important;}
 .image-background {
-    background-image: url('../assets/images/edit_lake.jpg');
+    background-image: url('../assets/images/bg.jpg');
     background-size: 100% 100%;
     background-repeat: no-repeat;
 
@@ -23,40 +23,40 @@
       padding: 16px !important;
     }
 
-    .item {
-      margin-bottom: 16px; 
-      background: rgba(255, 255, 255, 0.9);
-      border: medium none;
-
-      .text-input {
-        color: #000;
-      }
-
-      input::moz-placeholder {
-        color:#fff !important;
-      }
-
-      input:moz-placeholder {
-        color:#fff !important;
-      }
-
-      *:-moz-placeholder {
-        color:#fff !important;
-      }
-
-      *:-ms-input-placeholder {
-        color:#fff !important;
-      }
-
-      *:-webkit-input-placeholder  {
-        color:#fff !important; 
-      }
-
-    }
-
     .icon {
       padding-right: 10px;
     }
+
+}
+
+.item {
+  margin-bottom: 16px; 
+  background: rgba(255, 255, 255, 0.9);
+  border: medium none;
+
+  .text-input {
+    color: #000;
+  }
+
+  input::moz-placeholder {
+    color:#fff !important;
+  }
+
+  input:moz-placeholder {
+    color:#fff !important;
+  }
+
+  *:-moz-placeholder {
+    color:#fff !important;
+  }
+
+  *:-ms-input-placeholder {
+    color:#fff !important;
+  }
+
+  *:-webkit-input-placeholder  {
+    color:#fff !important; 
+  }
 
 }
 
@@ -95,6 +95,18 @@ ion-content .scroll-content, .scroll-content ion-content, ion-content .fixed-con
     overflow-y: auto !important;
 } 
 
+.mt-10{
+	margin-top: 10px;
+}
+.mt-20{
+	margin-top: 20px;
+}
+.mt-30{
+	margin-top: 30px;
+}
+.mt-40{
+	margin-top: 40px;
+}
 .mb-10{
 	margin-bottom: 10px;
 }

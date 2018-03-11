@@ -11,6 +11,11 @@ page-welcome {
 		.swiper-pagination{
 			bottom: 10% !important;
 		}
+		.tagline{font-size: 1.7rem; color: rgba(color($colors, secondary), 1); }
+		.introtext{ font-size: 1.6rem; color: white; }
+		
 	}
+	.footer .toolbar{padding: 0 !important; min-height: 50px;}
+	.footer .button{margin:0; border-radius: 0;min-height: 50px !important;}
 
 }

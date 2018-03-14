@@ -1,0 +1,21 @@
+.forgotpass-component{
+
+	ion-card.card {
+		box-shadow: none;
+		background: rgba(0, 0, 0, 0.7);
+		border-radius: 5px;
+	}
+
+	a, p {
+		text-align: center;
+	}
+	ion-card-header.card-header {
+		color: #fff !important;
+		text-align: center;
+	}
+
+	.list > .item-block:first-child {
+		border: medium none;
+	}
+
+}

@@ -142,6 +142,44 @@ export class AuthServiceProvider {
   }
 
 
+  //reset user password
+  userResetPassword(username) {
+
+    return new Promise((resolve, reject) => {
+
+        //start 
+        
+        //get user data
+        this.getAuthData('user').subscribe(user => {
+
+            //start successful login
+            let userResult= user.json();
+
+            //console.log(userResult);
+
+            //store user object in storage
+            this.myUserData.setUser(userResult.data);
+
+            //login user
+            this.myUserData.login();
+            //end successful login
+
+            //return user object
+            resolve(userResult.data);
+
+        }, (err) => {
+
+            reject(err);
+
+        });
+
+        //end 
+
+    });
+
+  }
+
+
   userLogin(username, password) {
 
     return new Promise((resolve, reject) => {

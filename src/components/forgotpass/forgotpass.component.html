@@ -1,6 +1,6 @@
-<span class="login-component">
+<span class="forgotpass-component">
 
-	<form #loginForm="ngForm" novalidate>
+	<form #forgotpassForm="ngForm" novalidate>
 
 				<ion-list no-lines class="mt-20">
 
@@ -20,21 +20,16 @@
 					
 					<br>
 
-					<button ion-button block color="appblue" class="mb-40" (click)="onLogin()">
-					  Login 
+					<button ion-button block color="appblue" class="mb-40" (click)="onForgotPassword()">
+					  Reset Password
 					</button>
 
-					<p>
-						<a (click)="onForgotPassword()">Forgot Password</a>
-					</p>
-					<br>
-
-					<button ion-button block margin-top color="appgrey" class="mb-20" (click)="onSignup()">
-					  Register 
+					<button ion-button block margin-top color="appgrey" class="mb-20" (click)="onLogin()">
+						Login 
 					</button>
 
-					<button ion-button block clear margin-top class="home-btn mb-20" (click)="onConfirmAccount()">
-					  Confirm My Account
+					<button ion-button block clear margin-top class="home-btn mb-20" (click)="onSignup()">
+					  Register
 					</button>
 
 				</ion-list>

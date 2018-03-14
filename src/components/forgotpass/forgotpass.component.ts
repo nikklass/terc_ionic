@@ -2,35 +2,32 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { AlertController, NavController, LoadingController } from 'ionic-angular';
 
 import { AuthServiceProvider } from '../../providers/auth-service/auth-service';
-/*import { MyUserData } from '../../providers/my-user-data/my-user-data';
-
-import { UserProfileData } from '../../interfaces/user-profile-data';*/
 
 import { Loginresponse } from '../../models/login/loginresponse.interface';
 
 @Component({
-  selector: 'app-login',
-  templateUrl: 'login.component.html'
+  selector: 'app-forgotpass',
+  templateUrl: 'forgotpass.component.html'
 })
-export class LoginComponent {
+export class ForgotpassComponent {
 
-  	@Output() loginStatus: EventEmitter<Loginresponse>;
+  	@Output() forgotpassStatus: EventEmitter<Loginresponse>;
 
   	responseData : any;
     loader : any;
-    userData = {"username":"", "password":""};
+    userData = {"username":""};
 
     constructor(private navCtrl: NavController, 
                 private authService: AuthServiceProvider, 
                 private alertCtrl: AlertController, 
                 private loadingCtrl:LoadingController) {
-    		this.loginStatus = new EventEmitter<Loginresponse>();
+    		this.forgotpassStatus = new EventEmitter<Loginresponse>();
     }
 
-    onLogin() {
+    onForgotPassword() {
 
         //basic error check
-        if(this.userData.username === '' || this.userData.password === '') {
+        if(this.userData.username === '') {
           let alert = this.alertCtrl.create({
             cssClass:'alert-danger',
             title:'Error', 
@@ -43,17 +40,16 @@ export class LoginComponent {
 
         this.loader = this.loadingCtrl.create({
           content: "Logging in..."
-        }); 
+        });
         this.loader.present();
 
-        this.authService.userLogin(this.userData.username, this.userData.password).then((result) => {
+        this.authService.userResetPassword(this.userData.username).then((result) => {
 
             //start successful login
-            //here
             this.loader.dismissAll();
 
             //send result back to calling page
-            this.loginStatus.emit(result);
+            this.forgotpassStatus.emit(result);
 
         }, (err) => {
             
@@ -64,7 +60,7 @@ export class LoginComponent {
             }
             
             //send result back to calling page
-            this.loginStatus.emit(error);
+            this.forgotpassStatus.emit(error);
 
         });
 
@@ -74,12 +70,8 @@ export class LoginComponent {
         this.navCtrl.push('SignupPage');
     }
 
-    onForgotPassword() {
-        this.navCtrl.push('ForgotpassPage');
-    }
-
-    onConfirmAccount() {
-        this.navCtrl.push('AccountconfirmPage');
+    onLogin() {
+        this.navCtrl.push('LoginPage');
     }
 
 }

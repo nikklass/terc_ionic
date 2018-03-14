@@ -4,6 +4,7 @@ import { EditprofileComponent } from './editprofile/editprofile.component';
 import { EditdobComponent } from './editdob/editdob.component';
 import { EditlocationComponent } from './editlocation/editlocation.component';
 import { LoginComponent } from './login/login.component';
+import { ForgotpassComponent } from './forgotpass/forgotpass.component';
 import { SignupComponent } from './signup/signup.component';
 import { ProfileComponent } from './profile/profile.component';
 import { ProfilesearchComponent } from './profilesearch/profilesearch.component';
@@ -18,6 +19,7 @@ import { OnlineusersComponent } from './onlineusers/onlineusers.component';
     EditdobComponent,
     EditlocationComponent,
     LoginComponent,
+    ForgotpassComponent,
     SignupComponent,
     ProfileComponent,
     ProfilesearchComponent,
@@ -33,6 +35,7 @@ import { OnlineusersComponent } from './onlineusers/onlineusers.component';
     EditdobComponent,
     EditlocationComponent,
     LoginComponent,
+    ForgotpassComponent,
     SignupComponent,
     ProfileComponent,
     ProfilesearchComponent,
